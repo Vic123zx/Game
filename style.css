@@ -1,0 +1,173 @@
+*{
+    margin: 0;
+}
+body{
+  background-color:#1B003A;
+}
+.div_parent_1{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+
+}
+.div_parent_2{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+
+}
+.div_parent_3{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+
+.Fila_1{
+    display: flex;
+
+}
+.Fila_2{
+    display: flex;
+}
+.Fila_3{
+    display: flex;
+}
+
+.Fila_1 .div_objeto{
+    width: 150px;
+    height: 150px;
+  border: 2px solid #08F7FE;
+    margin: 10px;
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+
+.Fila_2 .div_objeto{
+   width: 150px;
+    height: 150px;
+  border: 2px solid #08F7FE;
+    margin: 10px;
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+
+.Fila_3 .div_objeto{
+     width: 150px;
+    height: 150px;
+    margin: 10px;
+  border: 2px solid #08F7FE;
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+
+.Circulo{
+   color: blue;
+    text-align: center;
+    font-size: 140px;
+}
+
+.X{
+    color: red;
+    text-align: center;
+    font-size: 150px;
+
+}
+
+
+
+.Screen_start{
+display: flex;
+width: 100%;
+justify-content: center;
+height: 98vh;
+align-items: center;
+}  
+
+.div_patalla_inicio{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 300px;
+    background-color: #1B003A;
+    border: 3px solid #08F7FE; 
+    border-radius: 10px;
+    padding: 30px;
+    align-items: center;
+}
+.button_screen{
+  color: #08F7FE;
+  background: transparent;
+  border: 2px solid #08F7FE;
+  font-size: 20px;
+  border-radius: 5px;
+  padding: 12px 25px;
+  cursor: pointer;
+  text-shadow: 0 0 8px #08F7FE;
+  margin: 0 0 30px;
+}
+.button_screen:hover {
+  background: #08F7FE;
+  color: #1B003A;
+}
+.Patalla{
+  position: fixed;        
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5); 
+  display: none;  
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+
+}
+.Cotenedor{
+ display: flex;
+  width: 300px;
+  height: 200px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.Section_MultiJugador{
+ display: none;
+ width: 100%;
+ height: 100vh;
+ justify-content: center;
+ align-items: center;
+
+}
+.Multiplayer{
+  margin-top: 30px;
+  font-size: 17px;
+}
+.div_MultiJugador{
+}
+.input{
+  margin-top: 15px;
+  padding: 10px;
+  text-align: center;
+  outline: none;
+  border-radius: 5px;
+
+}
+
+.texto_MultiJugador{
+  text-align: center;
+  color: #fff;
+  font-size: 40px;
+}
