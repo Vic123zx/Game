@@ -4,17 +4,21 @@ const Partida = parms.get("Partida")
 
 Btn.forEach(Btn => {
     Btn.addEventListener("click",()=>{
-        fetch("./logica/Partida.php",{
+        fetch("./controller/Partida.php",{
             method:"POST",
             headers: { "Content-Type": "application/json"},
             body:JSON.stringify({Codigo : Partida,
-                                 Accion:'Insertar'
-            })
+                                 Accion:'Insertar',
+                                 Posicion:Btn.getAttribute("data-posicion")
+                                })
 
         })
         .then(r =>r.json())
         .then(d=>{
-            console.log(d)
+          
+                console.log(d)
+
+            
         })
     })
     

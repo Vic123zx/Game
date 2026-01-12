@@ -9,7 +9,7 @@ let Bucle_Verificacion;
 
 
 function Crear_partida(Codigo,Accion) {
-fetch("../logica/Partida.php",{
+fetch("../controller/Partida.php",{
 method:"POST",
 headers: { "Content-Type": "application/json"},
 body:JSON.stringify({
@@ -28,7 +28,7 @@ body:JSON.stringify({
 
 function Unirse() {
 Codigo =Codigo_Unirse.value
-fetch("../logica/Partida.php",{
+fetch("../controller/Partida.php",{
 method:"POST",
 headers: { "Content-Type": "application/json"},
 body:JSON.stringify({
@@ -42,14 +42,13 @@ body:JSON.stringify({
          window.location.href=`/Game.html?Partida=${Codigo}`
       
     }
-    console.log(Datos)
 })    
 }
 
 
 function Verificacion() {
     Codigo=Codigo_crear.value
-fetch("../logica/Partida.php",{
+fetch("../controller/Partida.php",{
 method:"POST",
 headers: { "Content-Type": "application/json"},
 body:JSON.stringify({
@@ -83,7 +82,4 @@ Boton_Unirse.addEventListener("click",()=>{
     Unirse()
 
 })
-
-
-
 

@@ -29,7 +29,7 @@ try{
   }
   catch (PDOException $e){
 
-    echo $e->getMessage();
+    echo json_encode(["error" => $e->getMessage()]);
   }
 
 

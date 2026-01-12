@@ -23,7 +23,9 @@ switch ($Accion) {
       
         break;
         case 'Insertar';
-        include "controlador/Logica.php";
+        include "controlador/Turno.php";
+        
+
     
     break;
     default: echo json_encode(["status" => "error",

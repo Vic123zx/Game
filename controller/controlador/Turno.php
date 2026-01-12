@@ -1,7 +1,7 @@
 <?php
+$Turno;
 try{
-
-    // Turno de la x
+// Turno de la x
 
     $stmt=$conexion->prepare("SELECT COUNT(*) FROM partida where id_partida =:id_partida and turno =:Id_jugador and jugador1_id=:jugador");
     $stmt->execute([":id_partida" => $Codigo_partida,
@@ -10,9 +10,10 @@ try{
 ]);
 
     if ($stmt->fetchColumn()>0) {
-        echo json_encode(["ok" => true]);
        $stmt=$conexion->prepare("UPDATE partida set turno = jugador2_id where id_partida = :id_partida");
        $stmt->execute([":id_partida" => $Codigo_partida]);
+       $Turno="X";
+       include "logica.php";
        exit();
     }
 
@@ -25,16 +26,24 @@ try{
 ]);
 
     if ($stmt->fetchColumn()>0) {
-        echo json_encode(["ok" => true]);
        $stmt=$conexion->prepare("UPDATE partida set turno = jugador1_id where id_partida = :id_partida");
        $stmt->execute([":id_partida" => $Codigo_partida]);
+       $Turno="0";
+       include "logica.php";
        exit();
     }
 
-        else{
+    else
+    {
         echo json_encode(["ok" => false]);
     }
+
+
 }
+
+
+
+
 
 catch(PDOException $e){
     echo json_encode(["error" => $e->getMessage()]);
