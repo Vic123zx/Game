@@ -4,7 +4,7 @@ let button_Multijugador =document.getElementById("button_Multijugador")
 
 
 button_start.addEventListener("click",() =>{
-window.location.href="/Game.html"      
+window.location.href="Game.html"      
 })
 
 button_Multijugador.addEventListener("click",() =>{

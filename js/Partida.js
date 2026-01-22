@@ -15,11 +15,18 @@ Btn.forEach(Btn => {
         })
         .then(r =>r.json())
         .then(d=>{
-          
-                console.log(d)
-
+    
+            if (d.ok != false) {
+    const Circulo =document.createElement("i")
+    Circulo.classList.add("bi","bi-circle","Circulo")
+    Btn.appendChild(Circulo)
+    Btn.setAttribute("data-ocupado", "Circulo");
+                
+            }
+        
+            }
             
-        })
+        )
     })
     
 });
