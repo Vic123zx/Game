@@ -171,3 +171,43 @@ align-items: center;
   color: #fff;
   font-size: 40px;
 }
+.card_tur{
+  background-color: #fff;
+  width: 150px;
+  height: 100px;
+  display: flex;
+  position: absolute;
+  background-color: #1B003A;
+    border: 3px solid #08F7FE; 
+  flex-direction: column;
+  justify-content: center;
+ border-radius: 10px;
+ right: 50px;
+ top: 190px;
+left: 335px;
+padding: 4px
+
+  
+}
+.msg_tur{
+  color: #08F7FE;
+  text-align: center;
+  margin: 5px;
+
+}
+
+
+.Next{
+  color: #08F7FE;
+  background: transparent;
+  border: 2px solid #08F7FE;
+  font-size: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-shadow: 0 0 8px #08F7FE;
+
+}
+.Next:hover{
+    background: #08F7FE;
+  color: #1B003A;
+}

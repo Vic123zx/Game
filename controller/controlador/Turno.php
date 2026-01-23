@@ -1,5 +1,4 @@
 <?php
-$Turno;
 try{
 // Turno de la x
 
@@ -10,8 +9,6 @@ try{
 ]);
 
     if ($stmt->fetchColumn()>0) {
-       $stmt=$conexion->prepare("UPDATE partida set turno = jugador2_id where id_partida = :id_partida");
-       $stmt->execute([":id_partida" => $Codigo_partida]);
        $Turno="X";
        include "logica.php";
        exit();
@@ -26,18 +23,13 @@ try{
 ]);
 
     if ($stmt->fetchColumn()>0) {
-       $stmt=$conexion->prepare("UPDATE partida set turno = jugador1_id where id_partida = :id_partida");
-       $stmt->execute([":id_partida" => $Codigo_partida]);
        $Turno="0";
        include "logica.php";
        exit();
     }
 
-    else
-    {
-        echo json_encode(["ok" => false]);
-    }
-
+    echo json_encode(['ok'=> true,
+    'msg'=>"No es tu turno"]);
 
 }
 

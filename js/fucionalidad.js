@@ -65,16 +65,16 @@ if (Ajuste.Empate.includes(parseInt(Boton.dataset.posicion)))return;
 
 function Movimiento_Winner(Player) {
  const CombinacionesGanadoras = [
-  [1,2,3],   
-  [4,5,6],   
-  [7,8,9],   
+  [0,1,2],   
+  [3,4,5],   
+  [6,7,8],   
 
-  [1,4,7],   
+  [0,3,6],   
+  [3,4,7],   
   [2,5,8],   
-  [3,6,9],   
 
-  [1,5,9],   
-  [3,5,7]   
+  [0,4,8],   
+  [2,4,6]   
 ]
 
 if(Ajuste.Ganador !== undefined) return;
@@ -86,8 +86,11 @@ CombinacionesGanadoras.forEach(Combos => {
 
      if (Player.Posiciones.includes(Combos[i])) {
          Contador++
+         console.log(Player_1.Posiciones)
 
-     if (Contador==3) {
+
+
+     if (Contador>=3) {
             Ajuste.Ganador=Player
         }
     }     

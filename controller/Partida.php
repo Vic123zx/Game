@@ -5,6 +5,7 @@ require_once("Conexion.php");
 $Datos =json_decode(file_get_contents("php://input"),true);
 $Accion=$Datos['Accion'];
 $Codigo_partida =$Datos['Codigo'];
+$Turno;
 
 $Id_jugador = session_id();
 
@@ -24,10 +25,10 @@ switch ($Accion) {
         break;
         case 'Insertar';
         include "controlador/Turno.php";
-        
-
-    
-    break;
+           break;
+        case'Actualizar';
+            include "controlador/Actualizar.php";
+            break;
     default: echo json_encode(["status" => "error",
                       "msg" => "Accion no existe"]); 
         break;
